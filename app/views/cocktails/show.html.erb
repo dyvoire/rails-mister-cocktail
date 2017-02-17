@@ -14,23 +14,24 @@
    </ul>
  </p>
 
-<% if @cocktail.photo? %>
-  <%= cl_image_tag @cocktail.photo.path, width: 300, height: 100, crop: :fill %>
+ <% if @cocktail.photo? %>
+ <%= cl_image_tag @cocktail.photo.path, width: 300, height: 100, crop: :fill %>
+
 <% end %>
 
 
 
- <br>
- <%= "______________________" %>
+<br>
+<%= "______________________" %>
 
- <br> <br>
+<br> <br>
 
- <%= link_to "Edit the cocktail", edit_cocktail_path(@cocktail) %>
- <br>
- <%= link_to "Destroy the cocktail", cocktail_path(@cocktail), method: :delete %>
- <br>
- <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
- <br>
-  <br>
- <%= link_to "Home", root_path, class: "btn btn-primary" %>
+<%= link_to "Edit the cocktail", edit_cocktail_path(@cocktail) %>
+<br>
+<%= link_to "Destroy the cocktail", cocktail_path(@cocktail), method: :delete %>
+<br>
+<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+<br>
+<br>
+<%= link_to "Home", root_path, class: "btn btn-primary" %>
 </div>

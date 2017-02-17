@@ -1,24 +1,31 @@
 
-  <h1 class="text-center">Cocktails</h1>
+<h1 class="text-center">Cocktails</h1>
 
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
 
-     <div class="card"
-     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.path, height: 300, width: 400, crop: :fill %>')">
-     <div class="card-category"></div>
-     <div class="card-description">
-       <h2><%= cocktail.name %></h2>
-     </div>
-     <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
-   </div>
- </div>
- <% end %>
-</div>
-<div></div>
 
-<br>
-<h4 ><%= link_to "Add a New Cocktail", new_cocktail_path(@cocktail), class: "btn btn-primary" %></h4>
+      <% if cocktail.photo? %>
+
+      <div class="card"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.path, height: 300, width: 400, crop: :fill %>')">
+      <% else %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://lorempixel.com/400/300/nightlife/<%= rand(10) + 1 %>'); height: 300; width: 400; crop: :fill);">
+        <% end %>
+
+        <div class="card-category"></div>
+        <div class="card-description">
+         <h2><%= cocktail.name %></h2>
+       </div>
+       <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+     </div>
+   </div>
+   <% end %>
+ </div>
+ <div></div>
+
+ <br>
+ <h4 ><%= link_to "Add a New Cocktail", new_cocktail_path(@cocktail), class: "btn btn-primary" %></h4>
 </div>
