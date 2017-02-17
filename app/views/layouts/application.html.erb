@@ -12,7 +12,7 @@
     <%= cloudinary_js_config %>
   </head>
 
-  <body>
+  <body style="background-image: url(<%= image_path "back.jpg" %>);">
   <%= render 'Shared/navbar'  %>
     <%= yield %>
   </body>
