@@ -1,0 +1,13 @@
+[0GNameError: undefined local variable or method `q' for main:Object
+from (pry):1:in `<main>'
+NameError: undefined local variable or method `install' for main:Object
+from (pry):2:in `<main>'
+NameError: undefined local variable or method `figaro' for main:Object
+from (pry):3:in `<main>'
+NameError: undefined local variable or method `install' for main:Object
+from (pry):4:in `<main>'
+
+
+
+
+
