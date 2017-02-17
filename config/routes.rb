@@ -7,4 +7,9 @@ end
 
   root to: 'cocktails#index'
 resources :doses, only: :destroy
+
+mount Attachinary::Engine => "/attachinary"
+
 end
+
+

@@ -23,6 +23,11 @@
 .navbar-wagon-brand img {
   width: 50px;
   padding-top: 20px;
+  transition: all 1s ease;
+}
+
+.navbar-wagon-brand img:hover {
+  transform: rotate(360deg);
 }
 
 /* Navbar right section (with form, links, button) */
